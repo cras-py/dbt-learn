@@ -17,3 +17,5 @@ sources:
           null
         
       - name: orders
+
+      - name: customers_copy
