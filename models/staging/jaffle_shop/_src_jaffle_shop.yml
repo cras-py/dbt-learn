@@ -19,3 +19,6 @@ sources:
       - name: orders
 
       - name: customers_copy
+        freshness: 
+          null
+        
