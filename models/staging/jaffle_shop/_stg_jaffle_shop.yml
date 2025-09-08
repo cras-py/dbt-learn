@@ -7,6 +7,10 @@ models:
         data_tests:
           - unique
           - not_null
+      - name: first_name
+        description: The first name of the customer
+      - name: last_name
+        description: The last name of the customer
 
   - name: stg_jaffle_shop__orders
     description: The grain of this table is one unique order per row
@@ -27,11 +31,13 @@ models:
                 - return_pending
                 - returned
       - name: customer_id
+        description: References the customer who placed the order
         data_tests:
           - not_null
           - relationships:
               to: ref('stg_jaffle_shop__customers')
               field: customer_id
       - name: order_date
+        description: The date when the order was placed
         data_tests:
           - not_null
