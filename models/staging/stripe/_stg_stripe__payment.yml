@@ -1,0 +1,24 @@
+models:
+- name: stg_stripe__payment
+  description: This model processes and standardizes payment data from Stripe, providing
+    a structured view of payment transactions. It includes details such as the order
+    associated with the payment, the method used, the status, and the amount in a
+    standardized format. This model is useful for analyzing payment trends and statuses
+    over time.
+  columns:
+  - name: id
+    description: Unique identifier for the payment transaction.
+  - name: order_id
+    description: Identifier for the order associated with the payment.
+  - name: payment_method
+    description: The method used for the payment, such as credit card or bank transfer.
+  - name: status
+    description: Current status of the payment, indicating whether it is completed,
+      pending, or failed.
+  - name: amount
+    description: The total amount of the payment, converted to a standard currency
+      unit.
+  - name: created_at
+    description: Timestamp indicating when the payment was created.
+  - name: batched_at
+    description: Timestamp indicating when the payment data was batched for processing.
